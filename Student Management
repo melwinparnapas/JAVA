@@ -1,0 +1,88 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class StudentManagement {
+    public static void main(String[] args) {
+
+        ArrayList<String> students = new ArrayList<>();
+
+        // add()
+        students.add("Arun");
+        students.add("Bala");
+        students.add("Charan");
+
+        // add(index, element)
+        students.add(1, "David");
+
+        // addAll()
+        ArrayList<String> newStudents =
+                new ArrayList<>(Arrays.asList("Eshan", "Farhan"));
+        students.addAll(newStudents);
+
+        System.out.println("Students: " + students);
+
+        // contains()
+        System.out.println("Contains Bala? "
+                + students.contains("Bala"));
+
+        // indexOf()
+        System.out.println("Index of Charan: "
+                + students.indexOf("Charan"));
+
+        // lastIndexOf()
+        students.add("Bala");
+        System.out.println("Last index of Bala: "
+                + students.lastIndexOf("Bala"));
+
+        // set()
+        students.set(0, "Ajay");
+        System.out.println("After Update: " + students);
+
+        // remove(object)
+        students.remove("David");
+
+        // remove(index)
+        students.remove(2);
+
+        // removeIf()
+        students.removeIf(name -> name.startsWith("F"));
+
+        System.out.println("After Removals: "
+                + students);
+
+        // retainAll()
+        students.retainAll(
+                Arrays.asList("Ajay", "Bala", "Eshan"));
+        System.out.println("After retainAll(): "
+                + students);
+
+        // clone()
+        ArrayList<String> copy =
+                (ArrayList<String>) students.clone();
+        System.out.println("Cloned List: " + copy);
+
+        // toArray()
+        Object[] arr = students.toArray();
+        System.out.println("Array Elements:");
+        for (Object s : arr) {
+            System.out.println(s);
+        }
+
+        // forEach()
+        System.out.println("Using forEach:");
+        students.forEach(System.out::println);
+
+        // isEmpty()
+        System.out.println("Is Empty? "
+                + students.isEmpty());
+
+        // clear()
+        students.clear();
+
+        System.out.println("After clear(): "
+                + students);
+
+        System.out.println("Is Empty Now? "
+                + students.isEmpty());
+    }
+}
