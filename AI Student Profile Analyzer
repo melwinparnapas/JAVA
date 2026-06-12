@@ -1,0 +1,99 @@
+import java.util.Arrays;
+
+public class AIStudentProfileAnalyzer {
+    public static void main(String[] args) {
+
+        String studentName = "  KAPI AI Student  ";
+        String skills = "Python,Java,Machine Learning,Deep Learning";
+        String project = "AI Based Weather Prediction System";
+
+        // trim()
+        studentName = studentName.trim();
+        System.out.println("Student Name: " + studentName);
+
+        // length()
+        System.out.println("Name Length: " + studentName.length());
+
+        // toUpperCase()
+        System.out.println("Uppercase: " + studentName.toUpperCase());
+
+        // toLowerCase()
+        System.out.println("Lowercase: " + studentName.toLowerCase());
+
+        // contains()
+        System.out.println("Contains AI? " + studentName.contains("AI"));
+
+        // startsWith()
+        System.out.println("Starts with KAPI? " + studentName.startsWith("KAPI"));
+
+        // endsWith()
+        System.out.println("Ends with Student? " + studentName.endsWith("Student"));
+
+        // split()
+        String[] skillArray = skills.split(",");
+        System.out.println("\nSkills:");
+        for(String s : skillArray){
+            System.out.println(s);
+        }
+
+        // join()
+        String joinedSkills = String.join(" | ", skillArray);
+        System.out.println("\nJoined Skills: " + joinedSkills);
+
+        // replace()
+        String updatedProject = project.replace("Weather", "Hospital");
+        System.out.println("Replace: " + updatedProject);
+
+        // replaceAll()
+        String text = "AI123DS456ML789";
+        System.out.println("ReplaceAll: " + text.replaceAll("[0-9]", ""));
+
+        // replaceFirst()
+        String sentence = "AI AI AI";
+        System.out.println("ReplaceFirst: " +
+                sentence.replaceFirst("AI", "DataScience"));
+
+        // indexOf()
+        System.out.println("Index of Student: " +
+                studentName.indexOf("Student"));
+
+        // compareTo()
+        String dept1 = "AI";
+        String dept2 = "DS";
+        System.out.println("CompareTo: " +
+                dept1.compareTo(dept2));
+
+        // compareToIgnoreCase()
+        System.out.println("CompareToIgnoreCase: " +
+                "java".compareToIgnoreCase("JAVA"));
+
+        // equals()
+        System.out.println("Equals: " +
+                dept1.equals("AI"));
+
+        // contentEquals()
+        System.out.println("ContentEquals: " +
+                dept1.contentEquals("AI"));
+
+        // isEmpty()
+        String remarks = "";
+        System.out.println("Is Empty: " +
+                remarks.isEmpty());
+
+        // getBytes()
+        byte[] bytes = studentName.getBytes();
+        System.out.println("Bytes: " +
+                Arrays.toString(bytes));
+
+        // valueOf()
+        int projectCount = 5;
+        String count = String.valueOf(projectCount);
+        System.out.println("Project Count: " + count);
+
+        System.out.println("\n===== AI STUDENT REPORT =====");
+        System.out.println("Name : " + studentName);
+        System.out.println("Project : " + project);
+        System.out.println("Skills : " + joinedSkills);
+        System.out.println("Projects Completed : " + count);
+    }
+}
